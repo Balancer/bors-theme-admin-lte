@@ -1,0 +1,22 @@
+{
+	"name": "balancer/bors-theme-admin-lte",
+	"description": "AdminLTE Bootstrap3 theme for BORS© framework",
+
+	"authors": [
+		{
+			"name": "Balancer",
+			"email": "balancer@balancer.ru"
+		}
+	],
+
+	"require": {
+		"balancer/bors-theme-bootstrap3": "*",
+		"bower-asset/admin-lte": "*"
+	},
+
+    "autoload": {
+		"psr-4": {
+			"B2\\Theme\\": "src/"
+		}
+    }
+}
