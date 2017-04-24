@@ -14,6 +14,15 @@
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+{if not empty($style)}
+<style type="text/css" media="all"><!--
+{foreach from=$style item="s"}
+{$s}
+{/foreach}
+--></style>
+{/if}
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -143,7 +152,7 @@
 
 			<!-- Default box -->
 			<div class="box">
-				<div class="box-body">
+				<div class="box-body table-responsive">
 {$body}
 				</div>
 			</div>
