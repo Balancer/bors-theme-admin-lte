@@ -15,9 +15,13 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-{if not empty($style)}
-<style type="text/css" media="all"><!--
-{foreach from=$style item="s"}
+{foreach $css_list as $css}
+	<link rel="stylesheet" href="{$css}" />
+{/foreach}
+
+{if $style}
+<style media="all"><!--
+{foreach $style as $s}
 {$s}
 {/foreach}
 --></style>
@@ -57,38 +61,7 @@
 						</a>
 
 						<ul class="dropdown-menu">
-							<!-- User image -->
-							<li class="user-header">
-								<img src="https://www.gravatar.com/avatar/{md5($me->email())}" class="img-circle" alt="User Image">
-								<p>
-									{$me->title()} — [список ролей?]
-									<small>[дополнительная инфо]</small>
-								</p>
-							</li>
-							<!-- Menu Body -->
-							<li class="user-body">
-								<div class="row">
-									<div class="col-xs-4 text-center">
-										<a href="#">Меню раз</a>
-									</div>
-									<div class="col-xs-4 text-center">
-										<a href="#">Меню два</a>
-									</div>
-									<div class="col-xs-4 text-center">
-										<a href="#">Меню три</a>
-									</div>
-								</div>
-								<!-- /.row -->
-							</li>
-							<!-- Menu Footer-->
-							<li class="user-footer">
-								<div class="pull-left">
-									<a href="/users/" class="btn btn-default btn-flat">Профиль</a>
-								</div>
-								<div class="pull-right">
-									<a href="/logout/" class="btn btn-default btn-flat">Выйти</a>
-								</div>
-							</li>
+							{$user_menu_html}
 						</ul>
 						{/if}
 					</li>
@@ -150,13 +123,9 @@
 {if $notice_message}<div class="alert alert-warning">{$notice_message}</div>{/if}
 {if $success_message}<div class="alert alert-success" >{$success_message}</div>{/if}
 
-			<!-- Default box -->
-			<div class="box">
-				<div class="box-body table-responsive">
+{block name="body"}
 {$body}
-				</div>
-			</div>
-			<!-- /.box -->
+{/block}
 
 		</section>
 		<!-- /.content -->
@@ -368,10 +337,45 @@
 </div>
 <!-- ./wrapper -->
 
+{*
 <!-- jQuery 2.2.3 -->
 <script src="/bower-asset/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/bower-asset/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+*}
+
+{if $js_include}
+	{foreach $js_include as $s}
+	<script src="{$s}"></script>
+	{/foreach}
+{/if}
+{if $javascript}
+	<script><!--
+{foreach $javascript as $s}
+{$s}
+{/foreach}
+--></script>
+{/if}
+
+{foreach $js_include_post as $s}
+<script src="{$s}"></script>
+{/foreach}
+{$jquery_document_ready=bors_page::template_data('jquery_document_ready')}
+{if $javascript_post || $jquery_document_ready}
+<script><!--
+{foreach $javascript_post as $s}
+{$s}
+{/foreach}
+{if $jquery_document_ready}
+$(document).ready(function(){literal}{{/literal}
+{foreach $jquery_document_ready as $s}
+{$s}
+{/foreach}
+})
+{/if}
+--></script>
+{/if}
+
 <!-- SlimScroll -->
 <script src="/bower-asset/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -380,5 +384,6 @@
 <script src="/bower-asset/admin-lte/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/bower-asset/admin-lte/dist/js/demo.js"></script>
+
 </body>
 </html>
