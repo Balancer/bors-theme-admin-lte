@@ -340,8 +340,6 @@
 {*
 <!-- jQuery 2.2.3 -->
 <script src="/bower-asset/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="/bower-asset/admin-lte/bootstrap/js/bootstrap.min.js"></script>
 *}
 
 {if $js_include}
@@ -356,6 +354,9 @@
 {/foreach}
 --></script>
 {/if}
+
+<!-- Bootstrap 3.3.6 -->
+<script src="/bower-asset/admin-lte/bootstrap/js/bootstrap.min.js"></script>
 
 {foreach $js_include_post as $s}
 <script src="{$s}"></script>
