@@ -97,13 +97,12 @@ body {
 				</div>
 			</form>
 			<!-- /.search form -->
-			<!-- sidebar menu: : style can be found in sidebar.less -->
-{$this->layout()->navbar()}
 
-			<ul class="sidebar-menu">
-<li>...</li>
-			</ul>
-
+{if $nav=$this->get('navbar_class')}
+	{$nav::mod_html()}
+{else}
+	{$this->layout()->navbar()}
+{/if}
 		</section>
 		<!-- /.sidebar -->
 	</aside>
