@@ -27,9 +27,11 @@
 		<!-- /.users-list -->
 	</div>
 	<!-- /.box-body -->
+{if $url_title}
 	<div class="box-footer text-center">
-		<a href="javascript:void(0)" class="uppercase">View All Users</a>
+		<a href="{$url}" class="uppercase">{$url_title}</a>
 	</div>
+{/if}
 	<!-- /.box-footer -->
 </div>
 <!--/.box -->
