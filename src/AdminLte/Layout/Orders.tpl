@@ -1,5 +1,5 @@
 <!-- TABLE: LATEST ORDERS -->
-<div class="box box-info">
+<div class="box {$box_type}">
 	<div class="box-header with-border">
 		<h3 class="box-title">{$title}</h3>
 
@@ -35,12 +35,15 @@
 		<!-- /.table-responsive -->
 	</div>
 	<!-- /.box-body -->
-{*
+{if $footer}
 	<div class="box-footer clearfix">
+		{$footer}
+{*
 		<a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
 		<a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
-	</div>
 *}
+	</div>
 	<!-- /.box-footer -->
+{/if}
 </div>
 <!-- /.box -->
