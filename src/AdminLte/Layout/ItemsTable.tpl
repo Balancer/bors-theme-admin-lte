@@ -1,3 +1,4 @@
+{if $items}
 <div class="box box-{$this->args('color_type', 'default')}">
 {if $title}
 	<div class="box-header">
@@ -32,3 +33,4 @@
 	</div>
  <!-- /.box-body -->
 </div>
+{/if}
