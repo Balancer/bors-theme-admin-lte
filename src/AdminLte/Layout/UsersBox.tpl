@@ -16,7 +16,7 @@
 		<ul class="users-list clearfix">
 {foreach $users as $u}
 			<li>
-				{$u->image()->thumbnail('64x64')}
+				<div class="text-center">{$u->image()->thumbnail('64x64')->html()}</div>
 				<a class="users-list-name" href="{$u->url()}">{$u->title()}</a>
 {*
 				<span class="users-list-date">Today</span>
