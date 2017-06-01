@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{$this->browser_title()}</title>
+	<title>{$this->browser_title()}{$this->app()->get('browser_title_suffix')}</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -87,6 +87,7 @@ body {
 	<aside class="main-sidebar">
 		<!-- sidebar: style can be found in sidebar.less -->
 		<section class="sidebar">
+{*
 			<!-- search form -->
 			<form action="#" method="get" class="sidebar-form">
 				<div class="input-group">
@@ -98,7 +99,7 @@ body {
 				</div>
 			</form>
 			<!-- /.search form -->
-
+*}
 {if $nav=$this->get('navbar_class')}
 	{$nav::mod_html()}
 {else}
