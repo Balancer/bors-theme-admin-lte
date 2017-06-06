@@ -1,3 +1,4 @@
+{if $users}
 <!-- USERS LIST -->
 <div class="box {$box_type}">
 	<div class="box-header with-border">
@@ -35,3 +36,4 @@
 	<!-- /.box-footer -->
 </div>
 <!--/.box -->
+{/if}
