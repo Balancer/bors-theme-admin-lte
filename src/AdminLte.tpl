@@ -18,6 +18,18 @@
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+form > fieldset > div > label:first-child {
+	margin-top: 8px;
+}
+
+form > fieldset > div > label:not(:first-child) {
+	font-weight: normal;
+}
+
+form input.btn {
+	margin-top: 8px;
+}
 </style>
 
 {foreach $css_list as $css}
