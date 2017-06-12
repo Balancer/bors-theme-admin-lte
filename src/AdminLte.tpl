@@ -27,8 +27,9 @@ form > fieldset > div > label:not(:first-child) {
 	font-weight: normal;
 }
 
-form input.btn {
+form input.btn, a.btn {
 	margin-top: 8px;
+	margin-bottom: 8px;
 }
 </style>
 
@@ -153,6 +154,7 @@ form input.btn {
 	</div>
 	<!-- /.content-wrapper -->
 
+{*
 	<footer class="main-footer">
 		<div class="pull-right hidden-xs">
 			<b>Version</b> 2.3.8
@@ -160,6 +162,7 @@ form input.btn {
 		<strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
 		reserved.
 	</footer>
+*}
 
 	<!-- Control Sidebar -->
 	<aside class="control-sidebar control-sidebar-dark">
