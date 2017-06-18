@@ -18,7 +18,7 @@
 {foreach $users as $u}
 			<li>
 	{if $u->image()}
-				<div class="text-center">{$u->image()->thumbnail('64x64')->html()}</div>
+				<div class="text-center"><img src="{$u->image()->url()}" style="max-width: 80px; max-height: 80px;"/></div>
 	{/if}
 				<a class="users-list-name" href="{$u->url()}">{$u->title()}</a>
 {*
