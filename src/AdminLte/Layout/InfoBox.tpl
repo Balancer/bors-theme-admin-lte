@@ -1,6 +1,6 @@
 <div class="col-md-3 col-sm-6 col-xs-12">
 	<div class="info-box">
-		<a href="{$url}"><span class="info-box-icon bg-{$color}"><i class="fa fa-{$fa}"></i></span></a>
+		<a href="{$url}"><span class="info-box-icon {$box_color}"><i class="fa fa-{$fa}"></i></span></a>
 
 		<div class="info-box-content">
 			<a href="{$url}">
