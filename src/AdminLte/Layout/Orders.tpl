@@ -44,6 +44,12 @@
 *}
 	</div>
 	<!-- /.box-footer -->
+{else}
+	{if $url_title}
+	<div class="box-footer text-center">
+		<a href="{$url}" class="uppercase">{$url_title}</a>
+	</div>
+	{/if}
 {/if}
 </div>
 <!-- /.box -->

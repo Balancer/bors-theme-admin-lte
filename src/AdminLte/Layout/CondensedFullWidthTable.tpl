@@ -28,5 +28,18 @@
 		</table>
 	</div>
 	<!-- /.box-body -->
+
+{if $footer}
+	<div class="box-footer clearfix">
+		{$footer}
+	</div>
+{else}
+	{if $url_title}
+	<div class="box-footer text-center">
+		<a href="{$url}" class="uppercase">{$url_title}</a>
+	</div>
+	{/if}
+{/if}
+
 </div>
 {/if}
