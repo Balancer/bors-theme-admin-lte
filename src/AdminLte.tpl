@@ -6,7 +6,6 @@
 	<title>{$this->browser_title()}{$this->app()->get('browser_title_suffix')}</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/dist/css/AdminLTE.min.css">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/dist/css/skins/_all-skins.min.css">
@@ -407,8 +406,10 @@ $(document).ready(function(){literal}{{/literal}
 <script src="/bower-asset/admin-lte/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="/bower-asset/admin-lte/dist/js/app.min.js"></script>
+{*
 <!-- AdminLTE for demo purposes -->
 <script src="/bower-asset/admin-lte/dist/js/demo.js"></script>
+*}
 
 </body>
 </html>

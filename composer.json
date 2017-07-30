@@ -11,8 +11,11 @@
 
 	"require": {
 		"balancer/bors-theme-bootstrap3": "*",
-		"bower-asset/admin-lte": "*",
-		"bower-asset/font-awesome": "*"
+
+		"bors/font-awesome": "*",
+		"bors/ionicons": "*",
+
+		"bower-asset/admin-lte": "*"
 	},
 
     "autoload": {

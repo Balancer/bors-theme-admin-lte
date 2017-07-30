@@ -9,6 +9,13 @@ class AdminLte extends \B2\Theme\Bootstrap3
 
 	var $__skip_pure_bootstrap_load = true;
 
+	function pre_show()
+	{
+		\B2\FontAwesome::load();
+		\B2\Ionicons::load();
+		return parent::pre_show();
+	}
+
 	function page_data()
 	{
 		$view = $this->id();
