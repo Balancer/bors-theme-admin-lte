@@ -1,5 +1,6 @@
 <!-- TABLE: LATEST ORDERS -->
 <div class="box {$box_type}">
+{if $title}
 	<div class="box-header with-border">
 		<h3 class="box-title">{$title}</h3>
 
@@ -10,6 +11,7 @@
 		</div>
 	</div>
 	<!-- /.box-header -->
+{/if}
 	<div class="box-body">
 		<div class="table-responsive">
 			<table class="table no-margin">
