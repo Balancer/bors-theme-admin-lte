@@ -11,6 +11,7 @@
 			<thead>
 				<tr>
 {foreach $item_fields as $prop_name => $prop_title}
+					<!-- {$prop_name} -->
 	{$this->make_sortable_th($prop_name, $prop_title)}
 {/foreach}
 				</tr>
