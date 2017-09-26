@@ -31,7 +31,13 @@ form input.btn, a.btn {
 }
 
 .content-header>h1 {
-	margin-top: 5px;
+	margin-top: 10px;
+	font-size: 24pt;
+}
+
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 20pt;
 }
 
 .content-header>.breadcrumb {
