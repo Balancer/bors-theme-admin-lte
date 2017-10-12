@@ -68,8 +68,6 @@ h2 {
   animation: none !important;
 }
 
-</script>
-
 </style>
 
 {foreach $css_list as $css}
