@@ -68,6 +68,10 @@ h2 {
   animation: none !important;
 }
 
+dd {
+	margin-bottom: 8px;
+}
+
 </style>
 
 {foreach $css_list as $css}
