@@ -394,9 +394,6 @@ h2 {
 --></script>
 {/if}
 
-<!-- Bootstrap 3.3.6 -->
-<script src="/bower-asset/admin-lte/bootstrap/js/bootstrap.min.js"></script>
-
 {foreach $js_include_post as $s}
 <script src="{$s}"></script>
 {/foreach}
