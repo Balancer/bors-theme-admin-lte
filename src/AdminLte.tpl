@@ -46,6 +46,32 @@ h2 {
 	top: 0;
 	left: 11px;
 }
+
+/* Custom styles to disable animation temporarily (inlined for show) */
+/* https://github.com/almasaeed2010/AdminLTE/issues/896#issuecomment-175278510 */
+/* Probably doesn't need all these prefixes but oh well */
+.disable-animations, .disable-animations * {
+  /* CSS transitions */
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  /* CSS transforms */
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  /* CSS animations */
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  animation: none !important;
+}
+
+dd {
+	margin-bottom: 8px;
+}
+
 </style>
 
 {foreach $css_list as $css}
@@ -423,6 +449,25 @@ $(document).ready(function(){literal}{{/literal}
 <!-- AdminLTE for demo purposes -->
 <script src="/bower-asset/admin-lte/dist/js/demo.js"></script>
 *}
+
+<!-- Custom scripts loaded AFTER AdminLTE JavaScript (inlined for show) -->
+<script>
+$(function ($) {
+  var $body = $('body');
+  // On click, capture state and save it in localStorage
+  $($.AdminLTE.options.sidebarToggleSelector).click(function () {
+    localStorage.setItem('sidebar', $body.hasClass('sidebar-collapse') ? 1 : 0);
+  });
+
+  // On ready, read the set state and collapse if needed
+  if (localStorage.getItem('sidebar') === '0') {
+    $body.addClass('disable-animations sidebar-collapse');
+    requestAnimationFrame(function () {
+      $body.removeClass('disable-animations');
+    });
+  }
+});
+</script>
 
 </body>
 </html>
