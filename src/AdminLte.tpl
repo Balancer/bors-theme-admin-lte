@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{$this->browser_title()}{$this->app()->get('browser_title_suffix')}</title>
+	<title>{$this->browser_title()}{object_property($this->app(), 'browser_title_suffix')}</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/bower-asset/admin-lte/dist/css/AdminLTE.min.css">
@@ -92,11 +92,11 @@ dd {
 <div class="wrapper">
 	<header class="main-header">
 		<!-- Logo -->
-		<a href="{$this->b2_app()->url()}" class="logo">
+		<a href="{object_property($this->app(), 'url')}" class="logo">
 			<!-- mini logo for sidebar mini 50x50 pixels -->
 			<span class="logo-mini"><i class="fa fa-tasks"></i></span>
 			<!-- logo for regular state and mobile devices -->
-			<span class="logo-lg">{$this->b2_app()->title()}</span>
+			<span class="logo-lg">{object_property($this->app(), 'title')}</span>
 		</a>
 		<!-- Header Navbar: style can be found in header.less -->
 		<nav class="navbar navbar-static-top">
