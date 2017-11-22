@@ -155,8 +155,10 @@ dd {
 			<!-- /.search form -->
 *}
 {if $nav=$this->get('navbar_class')}
+	<!-- navbar class {$nav} -->
 	{$nav::mod_html()}
 {else}
+	<!-- navbar from layout -->
 	{$this->layout()->navbar()}
 {/if}
 		</section>
