@@ -7,7 +7,7 @@
 {/if}
 	<!-- /.box-header -->
 	<div class="box-body no-padding">
-		<table class="table table-condensed">
+		<table class="{$this->layout()->table_class()}">
 			<thead>
 				<tr>
 {foreach $item_fields as $prop_name => $prop_title}
