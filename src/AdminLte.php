@@ -38,6 +38,8 @@ class AdminLte extends \B2\Theme\Bootstrap3
 		if($user_menu_class = $view->get('user_menu_class'))
 			$data['user_menu_html'] = call_user_func([$user_menu_class, 'mod_html']);
 
+		$data['q'] = bors()->request()->data('q');
+
 		return array_merge(parent::page_data(), $data);
 	}
 }

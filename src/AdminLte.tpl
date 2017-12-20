@@ -141,11 +141,11 @@ dd {
 	<aside class="main-sidebar">
 		<!-- sidebar: style can be found in sidebar.less -->
 		<section class="sidebar">
-{*
+{if $this->get('search_link')}
 			<!-- search form -->
-			<form action="#" method="get" class="sidebar-form">
+			<form action="{$this->search_link()}" method="get" class="sidebar-form">
 				<div class="input-group">
-					<input type="text" name="q" class="form-control" placeholder="Search...">
+					<input type="text" name="q" class="form-control" placeholder="Поиск..." value="{$q}">
 							<span class="input-group-btn">
 								<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
 								</button>
@@ -153,7 +153,7 @@ dd {
 				</div>
 			</form>
 			<!-- /.search form -->
-*}
+{/if}
 {if $nav=$this->get('navbar_class')}
 	<!-- navbar class {$nav} -->
 	{$nav::mod_html()}
