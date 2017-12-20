@@ -31,7 +31,7 @@
 </head>
 <body class="{$this->body_css()}">
 
-{if $error_message}<div class="alert alert-error"   >{$error_message}</div>{/if}
+{if $error_message}<div class="alert alert-danger"   >{$error_message}</div>{/if}
 {if $notice_message}<div class="alert alert-warning">{$notice_message}</div>{/if}
 {if $success_message}<div class="alert alert-success" >{$success_message}</div>{/if}
 

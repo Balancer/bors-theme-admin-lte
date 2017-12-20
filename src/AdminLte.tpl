@@ -184,7 +184,7 @@ dd {
 		<!-- Main content -->
 		<section class="content">
 
-{if $error_message}<div class="alert alert-error"   >{$error_message|markdown}</div>{/if}
+{if $error_message}<div class="alert alert-danger"   >{$error_message|markdown}</div>{/if}
 {if $notice_message}<div class="alert alert-warning">{$notice_message|markdown}</div>{/if}
 {if $success_message}<div class="alert alert-success" >{$success_message|markdown}</div>{/if}
 
