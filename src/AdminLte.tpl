@@ -72,6 +72,9 @@ dd {
 	margin-bottom: 8px;
 }
 
+aside.main-sidebar section ul li a i {
+	padding-right: 4px;
+}
 </style>
 
 {foreach $css_list as $css}
