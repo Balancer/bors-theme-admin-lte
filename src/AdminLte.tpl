@@ -75,6 +75,12 @@ dd {
 aside.main-sidebar section ul li a i {
 	padding-right: 4px;
 }
+
+.main-header .sidebar-toggle {
+	font-family: Font Awesome\ 5 Free, fontAwesome;
+	font-weight: 900;
+}
+
 </style>
 
 {foreach $css_list as $css}
