@@ -197,10 +197,23 @@ aside.main-sidebar section ul li a i {
 {if $notice_message}<div class="alert alert-warning">{$notice_message|markdown}</div>{/if}
 {if $success_message}<div class="alert alert-success" >{$success_message|markdown}</div>{/if}
 
+{$side_menu=$this->get('side_menu')}
+
+{if $side_menu}
+<div class="row">
+	<div class="col-sm-9">
+{/if}
 {block name="body"}
 {$body}
 {/block}
 
+{if $side_menu}
+	</div>
+	<div class="col-sm-3">
+		{$this->layout()->right_side_menu($side_menu)}
+	</div>
+</div>
+{/if}
 		</section>
 		<!-- /.content -->
 	</div>
@@ -412,11 +425,6 @@ aside.main-sidebar section ul li a i {
 	<div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-{*
-<!-- jQuery 2.2.3 -->
-<script src="/bower-asset/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
-*}
 
 {if $js_include}
 	{foreach $js_include as $s}
